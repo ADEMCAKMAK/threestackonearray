@@ -30,6 +30,8 @@ public class NStack<Integer> implements Stack<Integer> {
 
     @Override
     public Integer pop(int num) {
+        if( empty(num) )
+            return null;
         Integer t = array[ start[num]+current[num]-1 ];
         array[ start[num]+current[num]-1 ] = null;
         current[num]--;
